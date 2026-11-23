@@ -15,10 +15,17 @@ export default function App() {
       <header className="relative overflow-hidden bg-matcha-700 text-cream-50">
         <div className="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-matcha-500/40" />
         <div className="absolute -left-10 bottom-0 h-32 w-32 rounded-full bg-matcha-900/40" />
-        <div className="relative mx-auto max-w-5xl px-5 py-12 text-center md:py-20">
+        <div className="relative mx-auto max-w-5xl px-5 py-10 text-center md:py-16">
           <p className="text-xs uppercase tracking-[0.35em] text-matcha-100">Take away · Delivery</p>
-          <h1 className="mt-3 font-serif text-4xl font-bold md:text-6xl">{SHOP.name}</h1>
-          <p className="mt-2 font-serif text-lg italic text-cream-200 md:text-2xl">{SHOP.slogan}</p>
+          <div className="mt-4 inline-flex items-center justify-center rounded-3xl bg-white px-6 py-3.5 shadow-xl ring-1 ring-cream-200/70">
+            <img
+              src="/logo.png"
+              alt={SHOP.name}
+              className="h-20 w-auto object-contain md:h-24"
+            />
+          </div>
+          <h1 className="sr-only">{SHOP.name}</h1>
+          <p className="mt-4 font-serif text-lg italic text-cream-200 md:text-2xl">{SHOP.slogan}</p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
             <a href="#menu" className="rounded-full bg-cream-50 px-6 py-2.5 text-sm font-semibold text-matcha-700 shadow hover:bg-cream-200">
               Xem menu
