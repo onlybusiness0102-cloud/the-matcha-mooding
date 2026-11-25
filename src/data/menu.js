@@ -22,7 +22,7 @@ export const categories = [
       { name: 'Matcha Creamy', hot: true, desc: 'kem muối, sữa tươi, matcha', prices: [30, 35, 40] },
       { name: 'Matcha Dâu / Xoài', desc: 'matcha, sữa, mứt dâu / xoài', prices: [30, 35, 40] },
       { name: 'Matcha Earl Grey', hot: true, desc: 'matcha, sữa, syrup trà bá tước', prices: [33, 37, 42] },
-      { name: 'Matcha Cheese Cookies', desc: 'matcha, sữa, kem cheese, khúc bạch, oreo', prices: [34, 39, 43] },
+      { name: 'Matcha Cheese Cookies', desc: 'matcha, sữa, kem cheese, khúc bạch, oreo', prices: [34, 39, 45] },
     ],
   },
   {
@@ -68,12 +68,24 @@ export const categories = [
     theme: 'tea',
     sizes: ['M', 'L'],
     note: 'Trà sữa không bột béo, healthy, ít calo. Chọn 1 topping FREE (có sẵn): Khúc bạch Phô Mai (4v), Khúc bạch Sữa Oreo (4v), Kem Muối, Kem Matcha, Trân Châu Hoàng Kim, Thạch Mềm, Trân Châu Trắng.',
+    // Topping miễn phí đi kèm mỗi ly trà sữa (mặc định chọn 1, món có freeToppingCount sẽ được chọn nhiều hơn)
+    freeToppings: [
+      'Khúc bạch Phô Mai (4v)',
+      'Khúc bạch Sữa Oreo (4v)',
+      'Kem Muối',
+      'Kem Matcha',
+      'Trân Châu Hoàng Kim',
+      'Thạch Mềm',
+      'Trân Châu Trắng',
+    ],
     items: [
-      { name: 'Hồng Trà Sữa / Lục Trà Sữa / Trà Sữa Thái Xanh', desc: 'Trà sữa, topping có sẵn', prices: [18, 28] },
+      { name: 'Hồng Trà Sữa', desc: 'Hồng trà, sữa, topping có sẵn', prices: [18, 28] },
+      { name: 'Lục Trà Sữa', desc: 'Lục trà, sữa, topping có sẵn', prices: [18, 28] },
+      { name: 'Trà Sữa Thái Xanh', desc: 'Trà Thái xanh, sữa, topping có sẵn', prices: [18, 28] },
       { name: 'Sữa Tươi / Trà Sữa Caramel Muối', desc: 'Trà sữa, Caramel, Kem Muối, topping có sẵn', prices: [28, 35] },
       { name: 'Trà Sữa Cheese Cookies', desc: 'Trà sữa, Cookies kem cheese, topping có sẵn', prices: [28, 35] },
       { name: 'Trà Sữa Cốm Non', desc: 'Trà sữa, sốt cốm non, topping có sẵn', prices: [35, 40] },
-      { name: 'Trà Sữa Full Topping', desc: 'Trà Sữa, kem muối, 3 loại topping', sizes: ['L'], prices: [38] },
+      { name: 'Trà Sữa Full Topping', desc: 'Trà Sữa, kem muối, 3 loại topping', sizes: ['L'], prices: [38], freeToppingCount: 3 },
     ],
   },
   {
