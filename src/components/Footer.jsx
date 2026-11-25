@@ -3,9 +3,7 @@ import { SHOP } from '../data/shop'
 export default function Footer() {
   return (
     <footer className="bg-matcha-900 px-5 py-10 text-center text-sm text-cream-100">
-      <div className="inline-flex items-center justify-center rounded-2xl bg-white px-4 py-2 shadow">
-        <img src="/logo.png" alt={SHOP.name} className="h-12 w-auto object-contain" />
-      </div>
+      <img src="/logo.png" alt={SHOP.name} className="mx-auto h-14 w-auto object-contain brightness-0 invert" />
       <p className="mt-3 italic text-matcha-100">{SHOP.slogan}</p>
       <div className="mt-5 space-y-1.5">
         <p>📍 {SHOP.address}</p>

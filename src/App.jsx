@@ -17,13 +17,11 @@ export default function App() {
         <div className="absolute -left-10 bottom-0 h-32 w-32 rounded-full bg-matcha-900/40" />
         <div className="relative mx-auto max-w-5xl px-5 py-10 text-center md:py-16">
           <p className="text-xs uppercase tracking-[0.35em] text-matcha-100">Take away · Delivery</p>
-          <div className="mt-4 inline-flex items-center justify-center rounded-3xl bg-white px-6 py-3.5 shadow-xl ring-1 ring-cream-200/70">
-            <img
-              src="/logo.png"
-              alt={SHOP.name}
-              className="h-20 w-auto object-contain md:h-24"
-            />
-          </div>
+          <img
+            src="/logo.png"
+            alt={SHOP.name}
+            className="mx-auto mt-5 h-24 w-auto object-contain brightness-0 invert md:h-32"
+          />
           <h1 className="sr-only">{SHOP.name}</h1>
           <p className="mt-4 font-serif text-lg italic text-cream-200 md:text-2xl">{SHOP.slogan}</p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
