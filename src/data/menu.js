@@ -102,10 +102,11 @@ export const categories = [
   },
 ]
 
-// Các mục phụ (không mở popup đặt món, chỉ hiển thị bảng giá)
+// Bảng tuỳ chọn đi kèm món (dùng cho cả OrderModal và bảng giá tham khảo ExtrasSection)
 export const extras = {
   toppings: [
-    { name: 'Kem muối / Kem matcha', price: 7 },
+    { name: 'Kem muối', price: 7 },
+    { name: 'Kem matcha', price: 7 },
     { name: 'Trân Châu Trắng', price: 5 },
     { name: 'Thạch Mềm', price: 5 },
     { name: 'Trân Châu Hoàng Kim MINI', price: 7 },
@@ -113,14 +114,15 @@ export const extras = {
     { name: 'Khúc Bạch Sữa Oreo (3-4 viên)', price: 8 },
   ],
   milk: [
-    { name: 'Sữa tươi', price: 0, note: 'Mặc định' },
-    { name: 'Oat Milk', price: 5 },
-    { name: 'Half-Half', price: 4 },
+    { id: 'standard', name: 'Sữa tươi tiêu chuẩn', price: 0, note: 'Mặc định', isDefault: true },
+    { id: 'oat', name: 'Đổi Oat Milk', price: 5 },
+    { id: 'half', name: 'Đổi sữa Half-Half', price: 4 },
   ],
   options: [
-    { name: 'Extra Dâu / Xoài', price: 6 },
+    { name: 'Extra sốt Dâu', price: 6 },
+    { name: 'Extra sốt Xoài', price: 6 },
+    { name: 'Extra sốt Caramel', price: 5 },
     { name: 'Extra Earl Grey', price: 5 },
-    { name: 'Extra Caramel', price: 5 },
     { name: 'Extra Cookies', price: 5 },
   ],
   extraShot: [
@@ -134,7 +136,7 @@ export const extras = {
     items: [
       { name: 'Matcha / Houjicha / Cacao Latte', price: 75 },
       { name: 'Matcha / Houjicha Cold Whisk', price: 86 },
-      { name: 'Trà Sữa Đa Vị', price: 37 },
+      { name: 'Trà Sữa Đậm Vị', price: 37 },
     ],
   },
   others: [
@@ -142,3 +144,6 @@ export const extras = {
     { name: 'Túi đá', price: 10 },
   ],
 }
+
+// Gộp danh sách Extra (shot + sốt/options) để chọn nhiều trong OrderModal
+export const extraChoices = [...extras.extraShot, ...extras.options]
